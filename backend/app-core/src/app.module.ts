@@ -23,7 +23,7 @@ import { WalletModule } from './wallet/wallet.module';
       }
     ),
     UserModule,
-    WalletModule,
+    //WalletModule,
     TransactionModule
   ],
   providers: [AppService],

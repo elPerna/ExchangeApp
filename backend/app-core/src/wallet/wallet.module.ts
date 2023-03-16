@@ -10,8 +10,9 @@ import { UserService } from 'src/user/user.service';
   ],
   controllers: [
     WalletController,
-    UserService
   ],
-  providers: [WalletService]
+  providers: [
+    WalletService, 
+    UserService]
 })
 export class WalletModule {}

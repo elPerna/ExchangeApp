@@ -8,7 +8,7 @@ export class WalletController {
   constructor(private readonly walletService: WalletService) {}
 
   @Post('create')
-  create(@Body() createWalletDto: CreateWalletDto) {
+  createWallet(@Body() createWalletDto: CreateWalletDto) {
     return this.walletService.create(createWalletDto);
   }
 

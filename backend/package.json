@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "@nestjs/class-validator": "^0.13.4"
+    "@nestjs/class-validator": "^0.13.4",
+    "connect-redis": "^7.0.1",
+    "express-session": "^1.17.3",
+    "ioredis": "^5.3.1",
+    "passport": "^0.6.0"
   }
 }

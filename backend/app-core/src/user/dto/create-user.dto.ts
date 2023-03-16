@@ -4,14 +4,14 @@ import { User } from "../schemas/user.schema";
 
 export class CreateUserDto {
     @IsString()
-    firstName: String;
+    firstName: string;
 
     @IsString()
-    lastName: String;
+    lastName: string;
 
     @IsString()
     @IsEmail()
-    email: String;
+    email: string;
 
     @IsString()
     @MinLength(8)
@@ -21,7 +21,7 @@ export class CreateUserDto {
             message: 'el password debe contener mayusculas, minuscula y numeros'
         }
     )
-    password: String;
+    password: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User)
