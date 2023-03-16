@@ -3,9 +3,10 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { AppService } from './app.service';
+import { TransactionModule } from './transaction/transaction.module';
 import { UserModule } from './user/user.module';
 import { WalletModule } from './wallet/wallet.module';
-import { TransactionModule } from './transaction/transaction.module';
+
 
 @Module({
   imports: [
@@ -28,3 +29,4 @@ import { TransactionModule } from './transaction/transaction.module';
   providers: [AppService],
 })
 export class AppModule {}
+
