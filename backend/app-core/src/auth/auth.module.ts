@@ -7,7 +7,7 @@ import { User } from 'src/user/schemas/user.schema';
 import { UserModule } from 'src/user/user.module';
 import { UserService } from 'src/user/user.service';
 import { AuthService } from './auth.service';
-import { localStrategy } from './strategy/local.strategy';
+import { LocalStrategy } from './strategy/local.strategy';
 import { SessionSerializer } from './strategy/session.sereallizer';
 
 @Module({
@@ -21,7 +21,7 @@ import { SessionSerializer } from './strategy/session.sereallizer';
     ],
     providers: [
         AuthService,
-        localStrategy,
+        LocalStrategy,
         SessionSerializer,
         HashService,
         UserService

@@ -16,7 +16,7 @@ export class UserController {
 
   @UseGuards(LocalAuthGuard)
   @Post('login')
-  loginUser(@Body() LoginUserDto: LoginUserDto) {
+  loginUser(@Body() loginUserDto: LoginUserDto) {
     return { msg: 'Logged in!'}
   }
 
