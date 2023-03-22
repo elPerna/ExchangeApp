@@ -1,4 +1,4 @@
-import { appRoot } from 'app-root-path'
+const appRoot = require('app-root-path')
 require('dotenv').config({ path: `${appRoot}/config/.env`})
 
 const HDWalletProvider = require('@truffle/hdwallet-provider')
