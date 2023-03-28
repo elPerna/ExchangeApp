@@ -4,6 +4,7 @@ pragma solidity ^0.8.17;
 import './WalletContract.sol';
 
 contract GeneratorFactoryContract {
+
     address private immutable owner;
     event WalletGenerated(address wallet);
 
@@ -14,7 +15,7 @@ contract GeneratorFactoryContract {
     function generate() external {
         require(msg.sender == owner);
         address wallet = address(
-            new WalletContract());
-            emit WalletGenerated(wallet);
+                new WalletContract());
+        emit WalletGenerated(wallet);
     }
 }

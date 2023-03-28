@@ -1,22 +1,22 @@
-import { appRoot } from 'app-root-path'
-require('dotenv').config({ path: `${appRoot}/config/.env`})
+const appRoot = require('app-root-path')
+require('dotenv').config({ path: `${appRoot}/config/.env` })
 const { sleep } = require(`${appRoot}/config/utils/lock`)
 
 const connectDB = require(`${appRoot}/config/db/getMongoose`)
 const WalletContract = require(`${appRoot}/config/models/WalletContract`)
 const GeneratorFactory = require('./factories/generatorFactory')
 
-let amount = process.argv[2] || 0
+var amount = process.argv[2] || 0
 const network = process.argv[3] || 97
 
-const { rpc } = require(`${appRoot}/config/chains/${network}`)
+const { rpc, g_address_pk, g_address } = require(`${appRoot}/config/chains/${network}`)
 
 connectDB.then(async () => {
     console.log('Loading contract...')
-    const generatorFactory = new GeneratorFactory(rpc)
-    while(amount > 0){
+    const generatorFactory = new GeneratorFactory(rpc, [g_address_pk])
+    while (amount > 0) {
         console.log('Generating wallet... ', 'Remain: ', amount - 1)
-        const res = await generatorFactory.generate()
+        const res = await generatorFactory.generate(g_address)
         const result = JSON.parse(
             JSON.stringify(res.logs[0].args).replace('Result', '').trim()
         )
@@ -25,10 +25,35 @@ connectDB.then(async () => {
             address: result.wallet,
             chainId: network
         })
-        await walletContract.save();
+        await walletContract.save()
         amount--
         await sleep(3000)
     }
 
     process.exit()
 })
+
+// const appRoot = require('app-root-path');
+// require('dotenv').config({ path: `${appRoot}/config/.env` });
+// const { sleep } = require(`${appRoot}/config/utils/lock`);
+// const connectDB = require(`${appRoot}/config/db/getMongoose`);
+// const WalletContract = require(`${appRoot}/config/models/WalletContract`);
+// const GeneratorFactory = require('./factories/generatorFactory');
+// const { rpc, g_address_pk, g_address } = require(`${appRoot}/config/chains/${process.argv[3] || 97}`);
+// const amount = process.argv[2] || 0;
+
+// connectDB.then(async () => {
+//     console.log('Loading contract...');
+//     const generatorFactory = new GeneratorFactory(rpc, [g_address_pk])
+//         while (amount > 0) {
+//             console.log('Generating wallet... ', 'Remain: ', amount - 1);
+//             const res = await generatorFactory.generate(g_address);
+//             const [{ wallet }] = JSON.parse(JSON.stringify(res.logs[0].args).replace('Result', '').trim()); 
+//             console.log(`Saving wallet: ${wallet}`);
+//             const walletContract = new WalletContract({ address: wallet, chainId: process.argv[3] || 97 });
+//             await walletContract.save();
+//             amount--;
+//             await sleep(3000);
+//         }
+//     process.exit();
+// })
