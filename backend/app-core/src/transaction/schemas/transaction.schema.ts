@@ -1,9 +1,9 @@
-import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose"
-import { Document } from "mongoose"
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Document } from 'mongoose';
 
 export type TransactionDocument = Transaction & Document;
 
-@Schema({ timestamps: true })
+@Schema({ timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } })
 export class Transaction {
     @Prop({
         required: true,
@@ -20,14 +20,20 @@ export class Transaction {
     @Prop()
     amount: number;
 
+    @Prop()
     to: string;
+
+    @Prop({
+        default: 0
+    })
+    confirmations: number;
 
     @Prop({
         required: false,
         index: true,
         default: 1
     })
-    status: number; //1 aprovado, 2 procesando, 3 procesado, 4 cancelado
+    status: number; //1. Aprobando, 2. Procesando, 3. Procesado, 4. Cancelado
 }
 
-export const TransactionSchema = SchemaFactory.createForClass(Transaction);
+export const TransactionSchema = SchemaFactory.createForClass(Transaction); 

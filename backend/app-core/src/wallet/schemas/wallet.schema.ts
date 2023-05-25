@@ -21,6 +21,9 @@ export class Wallet {
     @Prop()
     coin: string;
 
+    @Prop()
+    chainId: number;
+
     @Prop({ type: Types.ObjectId, ref: 'Transaction' })
     transactions: [Transaction]
 

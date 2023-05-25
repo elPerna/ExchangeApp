@@ -1,0 +1,23 @@
+{
+    "apps": [
+        {
+            "name": "BNB Broadcast NODE",
+            "script": "./daemon/subscriptions/chain/evm/native-coin/bnb.js"
+        },
+
+        {
+            "name": "App Withdraw Broadcast NODE",
+            "script": "./daemon/subscriptions/app/withdraws.js"
+        },
+
+        {
+            "name": "BNB Worker NODE",
+            "script": "./daemon/workers/chain/bsc.js"
+        },
+
+        {
+            "name": "App withdraw Worker NODE",
+            "script": "./daemon/workers/local/withdrawRequest.js"
+        }
+    ]
+}

@@ -16,9 +16,9 @@
       "type": "receive"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[],\"name\":\"DepositedOnMetaDapp\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/WalletContract.sol\":\"WalletContract\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/WalletContract.sol\":{\"keccak256\":\"0xeceb98f4c0d735be1478997c4df0e3b027c00564f9f2e433559f009b46251168\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://485776317ecf543d6897be05d0a4e5fc54ba2eb23b86ebca1959b2fa0db10452\",\"dweb:/ipfs/QmdwFwkqrXhrbS6zLhgyhH8TVeYYeT7Ffmk1LvHMBkGDcx\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060e98061001f6000396000f3fe608060405236601057600e6013565b005b600e5b662386f26fc10000341060b157604051600090739429e13559be7c1b4955a29e64a43e19979d67129047908381818185875af1925050503d80600081146074576040519150601f19603f3d011682016040523d82523d6000602084013e6079565b606091505b5050905080608657600080fd5b6040517fc90bc2a3b112366988312f7a5e1f090f2244e68230808f152122ad4d6d53e8dc90600090a1505b56fea2646970667358221220386841512ac364335d5e17f4240393560d200f267ce4c4017cdf8087e5496b2264736f6c63430008110033",
-  "deployedBytecode": "0x608060405236601057600e6013565b005b600e5b662386f26fc10000341060b157604051600090739429e13559be7c1b4955a29e64a43e19979d67129047908381818185875af1925050503d80600081146074576040519150601f19603f3d011682016040523d82523d6000602084013e6079565b606091505b5050905080608657600080fd5b6040517fc90bc2a3b112366988312f7a5e1f090f2244e68230808f152122ad4d6d53e8dc90600090a1505b56fea2646970667358221220386841512ac364335d5e17f4240393560d200f267ce4c4017cdf8087e5496b2264736f6c63430008110033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[],\"name\":\"DepositedOnMetaDapp\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/WalletContract.sol\":\"WalletContract\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/WalletContract.sol\":{\"keccak256\":\"0x187d9b4ff1b668cae34fa7a9ed837c35991d699948f7129358e8df3357f693c6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d007e8dbb91a60be4a50dd375a3b9811a6d0f0c673c3dd02ff7725e92090d367\",\"dweb:/ipfs/QmNi2h65d9z3wmc82MXnsnSd1eYK7tHb9mW4pq9gNsaxJe\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060e98061001f6000396000f3fe608060405236601057600e6013565b005b600e5b662386f26fc10000341060b1576040516000907367b863c21d3161edff8641256a23b1ec6967e0f39047908381818185875af1925050503d80600081146074576040519150601f19603f3d011682016040523d82523d6000602084013e6079565b606091505b5050905080608657600080fd5b6040517fc90bc2a3b112366988312f7a5e1f090f2244e68230808f152122ad4d6d53e8dc90600090a1505b56fea26469706673582212204e1aef33513f2ed758dd1a05288fe8b8f57b17ed5406b9fa24e705812b1d6d9664736f6c63430008110033",
+  "deployedBytecode": "0x608060405236601057600e6013565b005b600e5b662386f26fc10000341060b1576040516000907367b863c21d3161edff8641256a23b1ec6967e0f39047908381818185875af1925050503d80600081146074576040519150601f19603f3d011682016040523d82523d6000602084013e6079565b606091505b5050905080608657600080fd5b6040517fc90bc2a3b112366988312f7a5e1f090f2244e68230808f152122ad4d6d53e8dc90600090a1505b56fea26469706673582212204e1aef33513f2ed758dd1a05288fe8b8f57b17ed5406b9fa24e705812b1d6d9664736f6c63430008110033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [
@@ -85,7 +85,7 @@
   ],
   "sourceMap": "61:561:1:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "61:561:1:-:0;;;;;;561:9;:7;:9::i;:::-;61:561;;608:9;283:241;125:17;324:9;:16;321:196;;375:58;;357:12;;196:42;;407:21;;357:12;375:58;357:12;375:58;407:21;196:42;375:58;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;356:77;;;456:7;448:16;;;;;;484:21;;;;;;;341:176;321:196;283:241::o",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.17;\r\n\r\ncontract WalletContract {\r\n\r\n    uint256 private constant MIN = 10000000000000000; // 0.01 \r\n    address private constant HOT_WALLET = 0x9429e13559be7C1b4955A29e64a43E19979D6712;\r\n\r\n    event DepositedOnMetaDapp();\r\n\r\n    function forward() private {\r\n        if(msg.value >= MIN){\r\n            (bool success, ) = payable(HOT_WALLET).call{value: address(this).balance}(\"\");\r\n            require(success);\r\n            emit DepositedOnMetaDapp();\r\n        }\r\n    }\r\n\r\n    receive() external payable { forward();}\r\n    fallback() external payable { forward();}\r\n}",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.17;\r\n\r\ncontract WalletContract {\r\n\r\n    uint256 private constant MIN = 10000000000000000; // 0.01 \r\n    address private constant HOT_WALLET = 0x67B863c21D3161edFf8641256A23b1eC6967E0F3;\r\n\r\n    event DepositedOnMetaDapp();\r\n\r\n    function forward() private {\r\n        if(msg.value >= MIN){\r\n            (bool success, ) = payable(HOT_WALLET).call{value: address(this).balance}(\"\");\r\n            require(success);\r\n            emit DepositedOnMetaDapp();\r\n        }\r\n    }\r\n\r\n    receive() external payable { forward();}\r\n    fallback() external payable { forward();}\r\n}",
   "sourcePath": "C:\\Users\\jose_\\Documents\\repos\\ExchangeApp\\backend\\tasks\\wallet-generator\\evm\\contracts\\WalletContract.sol",
   "ast": {
     "absolutePath": "project:/contracts/WalletContract.sol",
@@ -194,7 +194,7 @@
               }
             },
             "value": {
-              "hexValue": "307839343239653133353539626537433162343935354132396536346134334531393937394436373132",
+              "hexValue": "307836374238363363323144333136316564466638363431323536413233623165433639363745304633",
               "id": 50,
               "isConstant": false,
               "isLValue": false,
@@ -207,7 +207,7 @@
                 "typeIdentifier": "t_address",
                 "typeString": "address"
               },
-              "value": "0x9429e13559be7C1b4955A29e64a43E19979D6712"
+              "value": "0x67B863c21D3161edFf8641256A23b1eC6967E0F3"
             },
             "visibility": "private"
           },
@@ -822,7 +822,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-03-27T20:32:29.396Z",
+  "updatedAt": "2023-05-24T19:11:33.396Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

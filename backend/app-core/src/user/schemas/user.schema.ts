@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { Document, Types } from "mongoose";
-//import { Wallet } from '../../wallet/schemas/wallet.schema';
+import { Wallet } from '../../wallet/schemas/wallet.schema';
 
 export type UserDocument = User & Document
 
@@ -23,6 +23,6 @@ export class User {
     })
     password: string;
 
-    /*@Prop({ type: [{ type: Types.ObjectId, ref: 'Wallet' }]})
-    wallets: [Wallet]; */
+    @Prop({ type: [{ type: Types.ObjectId, ref: 'Wallet' }]})
+    wallets: [Wallet];
 }

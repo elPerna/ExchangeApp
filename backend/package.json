@@ -1,16 +1,19 @@
 {
   "dependencies": {
+    "@nestjs/bullmq": "^1.1.0",
     "@nestjs/class-validator": "^0.13.4",
     "@truffle/contract": "^4.6.18",
     "@truffle/hdwallet-provider": "^2.1.9",
     "app-root-path": "^3.1.0",
+    "bullmq": "^3.13.4",
     "connect-redis": "^7.0.1",
     "dotenv": "^16.0.3",
     "express-session": "^1.17.3",
     "ioredis": "^5.3.1",
     "mongoose": "^7.0.3",
+    "nodemailer": "^6.9.2",
     "passport": "^0.6.0",
     "solc": "^0.8.19",
-    "web3": "^1.9.0"
+    "web3": "^1.10.0"
   }
 }

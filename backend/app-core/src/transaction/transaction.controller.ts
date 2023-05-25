@@ -1,15 +1,30 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Request ,Query, UseGuards } from '@nestjs/common';
 import { TransactionService } from './transaction.service';
-import { CreateTransactionDto } from './dto/create-transaction.dto';
-//import { UpdateTransactionDto } from './dto/update-transaction.dto';
+import { QueryDto } from './dto/query.dto';
+import { AuthenticatedGuard } from 'src/guard/auth/authenticated.guard';
+
+
 
 @Controller('transaction')
 export class TransactionController {
   constructor(private readonly transactionService: TransactionService) {}
 
-  @Post()
-  create(@Body() createTransactionDto: CreateTransactionDto) {
-    return this.transactionService.create(createTransactionDto);
+  @UseGuards(AuthenticatedGuard)
+  @Get('all')
+  transactions(
+    @Request() req,
+    @Query() QueryDto: QueryDto
+    ) {
+    return this.transactionService.getTransactions(
+      req.user.email,
+      QueryDto
+      );
+  }
+
+  @UseGuards(AuthenticatedGuard)
+  @Get('info')
+  transaction(@Query() queryDto: QueryDto){
+    return this.transactionService.getTransaction(queryDto)
   }
 
 }
